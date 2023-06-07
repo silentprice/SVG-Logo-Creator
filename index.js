@@ -1,5 +1,8 @@
 const prompts = require('prompts');
 const fs = require('fs');
+const inquirer = require('inquirer');
+
+
 
 const shapes = ['circle', 'triangle', 'square'];
 
