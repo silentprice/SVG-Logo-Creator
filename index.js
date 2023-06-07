@@ -2,8 +2,6 @@ const prompts = require('prompts');
 const fs = require('fs');
 const inquirer = require('inquirer');
 
-
-
 const shapes = ['circle', 'triangle', 'square'];
 
 async function promptUser() {
@@ -16,7 +14,7 @@ async function promptUser() {
     {
       type: 'text',
       name: 'textColor',
-      message: 'Enter the text color (keyword or hexadecimal):'
+      message: 'Enter the text color (keyword or hexadecimal number):'
     },
     {
       type: 'select',
@@ -38,12 +36,24 @@ function generateSVG(response) {
     const { text, textColor, shape, shapeColor } = response;
   
     const svgContent = `
-      <svg width="300" height="200">
-        <rect width="300" height="200" fill="${shapeColor}" />
-        <text x="150" y="100" fill="${textColor}" text-anchor="middle">${text}</text>
-      </svg>
+    <!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Document</title>
+        </head>
+        <body>
+            <svg width="300" height="200">
+                <rect width="300" height="200" fill="${shapeColor}" />
+                <text x="150" y="100" fill="${textColor}" text-anchor="middle">${text}</text>
+            </svg>
+        </body>
+    </html>
+
     `;
-      fs.writeFile('logo.svg', svgContent, (err) => {
+      fs.writeFile('logo.html', svgContent, (err) => {
       if (err) {
         console.error('Error creating SVG file:', err);
       } else {
