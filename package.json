@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/silentprice/SVG-Logo-Creator/issues"
   },
-  "homepage": "https://github.com/silentprice/SVG-Logo-Creator#readme"
+  "homepage": "https://github.com/silentprice/SVG-Logo-Creator#readme",
+  "dependencies": {
+    "jest": "^29.5.0"
+  }
 }
