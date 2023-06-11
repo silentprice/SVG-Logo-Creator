@@ -11,7 +11,7 @@ node run test
 ## GithubUrl
 * https://github.com/silentprice/SVG-Logo-Creator
 
-## Live Url
+## Live Video Demo
 * 
 
 ## Screenshot
