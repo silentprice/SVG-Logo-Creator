@@ -34,6 +34,15 @@ async function promptUser() {
 
 function generateSVG(response) {
     const { text, textColor, shape, shapeColor } = response;
+
+    let shapeElement;
+    if (shape === 'circle') {
+      shapeElement = `<circle cx="150" cy="100" r="50" fill="${shapeColor}" />`;
+    } else if (shape === 'triangle') {
+      shapeElement = `<polygon points="150,50 100,150 200,150" fill="${shapeColor}" />`;
+    } else if (shape === 'square') {
+      shapeElement = `<rect x="100" y="50" width="100" height="100" fill="${shapeColor}" />`;
+    }
   
     const svgContent = `
     <!DOCTYPE html>
