@@ -12,6 +12,6 @@ node run test
 * https://github.com/silentprice/SVG-Logo-Creator
 
 ## Live Video Demo
-* https://drive.google.com/file/d/1IGWiKKwoI6NghLfPHM777Yo7TUR9jwdE/view
+* https://drive.google.com/file/d/1ievKag7UM30YKlvQgVh6PP9Xt_OXCE2s/view 
 
 
